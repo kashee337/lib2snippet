@@ -1,0 +1,5 @@
+overwrite: false
+output: "snippets"
+lib_dir:
+  cpp: "lib/cpp"
+  python: "lib/python"
