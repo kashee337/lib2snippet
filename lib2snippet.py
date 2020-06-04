@@ -32,8 +32,10 @@ def is_overwrite(output_path):
 
 
 if __name__ == "__main__":
-    assert len(sys.argv) > 1, "please set the path to config.yaml"
-    cfg_path = sys.argv[1]
+    if len(sys.argv) > 1:
+        cfg_path = sys.argv[1]
+    else:
+        cfg_path = "config.yaml"
     assert os.path.isfile(cfg_path), "{} is not exist".format(cfg_path)
 
     with open(cfg_path, "rb") as f:
