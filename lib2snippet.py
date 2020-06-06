@@ -9,7 +9,7 @@ import yaml
 
 def packing_codebody(filepath):
     with open(filepath, "r") as f:
-        code_strlist = [line.strip() for line in f.readlines()]
+        code_strlist = [line.rstrip() for line in f.readlines()]
     return code_strlist
 
 
@@ -32,10 +32,7 @@ def is_overwrite(output_path):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) > 1:
-        cfg_path = sys.argv[1]
-    else:
-        cfg_path = "config.yaml"
+    cfg_path = sys.argv[1] if len(sys.argv) > 1 else "config.yaml"
     assert os.path.isfile(cfg_path), "{} is not exist".format(cfg_path)
 
     with open(cfg_path, "rb") as f:
