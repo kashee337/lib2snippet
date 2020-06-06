@@ -40,8 +40,8 @@ if __name__ == "__main__":
 
     for lang, input_dir in cfg["lib_dir"].items():
         try:
-            os.makedirs(cfg["output"], exist_ok=True)
-            output_path = os.path.join(cfg["output"], "{}.json".format(lang))
+            os.makedirs(cfg["out_dir"], exist_ok=True)
+            output_path = os.path.join(cfg["out_dir"], "{}.json".format(lang))
             input_path = os.path.join(input_dir, "*.{}".format(lang))
             # overwrite check
             if not cfg["overwrite"]:

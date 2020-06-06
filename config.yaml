@@ -1,5 +1,5 @@
 overwrite: false
-output: "snippets"
+out_dir: "path/to/vscode/snippets/dir"
 lib_dir:
-  cpp: "lib/cpp"
-  python: "lib/python"
+  cpp: "../../lib/cpp"
+  py: "../../lib/python"
