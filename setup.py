@@ -14,9 +14,10 @@ setup(
     description="register for vscode snippet",
     author="kashee337",
     python_requires=">=3.8",
+    packages=["lib2snippet"],
     entry_points={
         "console_scripts": [
-            "tosnip = lib2snippet:main",
+            "tosnip = lib2snippet.main:main",
         ],
     },
 )
