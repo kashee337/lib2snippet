@@ -31,7 +31,7 @@ def is_overwrite(output_path):
     return key == "y"
 
 
-if __name__ == "__main__":
+def main():
     cfg_path = sys.argv[1] if len(sys.argv) > 1 else "config.yaml"
     assert os.path.isfile(cfg_path), "{} is not exist".format(cfg_path)
 
@@ -60,3 +60,7 @@ if __name__ == "__main__":
                 print("{} : save".format(output_path))
         except TypeError:
             print("{} : invalid format".format(lang))
+
+
+if __name__ == "__main__":
+    main()
